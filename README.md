@@ -13,7 +13,16 @@
 ### Installing the chart
     $ helm install hello-world helloworld/ --values helloworld/values.yaml
 
-### Forwardint the port for test
+### Forwarding the port for test
     $ kubectl port-forward hello-world-6c54fdf68d-fhd7z 8080:80
 
-··
+## Running Traefik with Helm
+
+### Adding Traefik repository
+    $ helm repo add traefik https://helm.traefik.io/traefik
+
+### Updating repository
+    $ helm repo update
+
+### Installing Helm
+    $ helm install traefik traefik/traefik
